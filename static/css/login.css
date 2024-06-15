@@ -1,0 +1,191 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f0f2f5;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 900px;
+  display: flex;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cover {
+  position: relative;
+  width: 50%;
+}
+
+.cover .front {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.cover img.img-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cover .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover .content {
+  color: #fff;
+  text-align: center;
+}
+
+.cover .content h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.cover .content p {
+  font-size: 16px;
+}
+
+.forms {
+  width: 50%;
+  padding: 40px;
+  background: #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.forms .logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.form-content .title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-boxes {
+  width: 100%;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #333;
+  padding: 10px 0;
+}
+
+.input-box i {
+  color: #adadad;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  outline: none;
+  background: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.input-box input::placeholder {
+  color: #adadad;
+}
+
+.text {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.text a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.text a:hover {
+  text-decoration: underline;
+}
+
+.button1-123 {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  outline: none;
+  background-color: #EA4C89;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button1-123:hover {
+  background-color: #d14278;
+}
+
+.sign-up-text {
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.sign-up-text label {
+  cursor: pointer;
+}
+
+.sign-up-text label:hover {
+  text-decoration: underline;
+}
+
+#flip {
+  display: none;
+}
+
+#flip:checked ~ .forms .login-form {
+  display: none;
+}
+
+#flip:checked ~ .forms .signup-form {
+  display: block;
+}
+
+#flip:not(:checked) ~ .forms .login-form {
+  display: block;
+}
+
+#flip:not(:checked) ~ .forms .signup-form {
+  display: none;
+}
+
+.signup-form {
+  display: none;
+}
